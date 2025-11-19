@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000428, #004e92, #2b5876, #4e4376);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(25, 25, 25, 0.92);
+      width: 70%;
+      margin: 60px auto;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+    }
+
+    /* BIG & GLOWING H1 */
+    h1 {
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-size: 3.2em; /* Bigger */
+      text-shadow: 0 0 15px #00eaff, 0 0 25px #007bff, 0 0 35px rgba(0, 198, 255, 0.5);
+    }
+
+    /* NAME — bright gradient + glow */
+    .name {
+      font-size: 2.8em;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff8a00, #e52e71, #00c6ff, #0072ff);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 4s ease infinite;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      border: 5px solid #00c6ff;
+      object-fit: cover;
+      display: block;
+      margin: 25px auto;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(0, 198, 255, 0.6);
+    }
+
+    /* BIG & GLOWING H2 */
+    h2 {
+      color: #ffffff;
+      border-top: 2px solid #444;
+      margin-top: 40px;
+      padding-top: 15px;
+      font-size: 2.2em; /* Bigger */
+      text-shadow: 0 0 10px rgba(0, 198, 255, 0.7); /* subtle glow */
+    }
+
+    /* SQUARE HOBBY CARDS — with description, bigger text & emoji */
+    .hobbies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      justify-items: center;
+    }
+
+    .hobby-card {
+      background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+      border: 2px solid #00c6ff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 180px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700; 
+      font-size: 1.2em; /* Bigger title text */
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      text-align: center;
+    }
+
+    .hobby-card:hover {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 198, 255, 0.6);
+    }
+
+    .hobby-card span {
+      font-size: 50px; /* Bigger emoji icons */
+      margin-bottom: 10px;
+    }
+
+    .hobby-card small {
+      font-weight: 400;
+      font-size: 0.85em; /* description */
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    a {
+      color: white;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(255, 100, 150, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: linear-gradient(90deg, #43e97b, #38f9d7);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(56, 249, 215, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi! I'm <span class="name">Yuri Pondavilla Solanzo</span>, a person who enjoys simple things in life like riding motorcycles and spending time with friends. I’m always eager to learn new things and explore opportunities that help me grow as an individual.</p>
+
+    <img src="images/YURI.jpg" alt="Profile Picture of Yuri Pondavilla Solanzo">
+
+    <h2>My Hobbies & Interests</h2>
+
+    <div class="hobbies">
+      <div class="hobby-card">
+        <span>🏍️</span>
+        Motorcycle Riding
+        <small>I love exploring new places with my friends.</small>
+      </div>
+      <div class="hobby-card">
+        <span>🏀</span>
+        Basketball
+        <small>Keeps me active and builds teamwork.</small>
+      </div>
+      <div class="hobby-card">
+        <span>🎬</span>
+        Watching Movies
+        <small>I enjoy action and comedy films.</small>
+      </div>
+      <div class="hobby-card">
+        <span>🎮</span>
+        Gaming
+        <small>Playing online games helps me unwind.</small>
+      </div>
+      <div class="hobby-card">
+        <span>🎵</span>
+        Listening to Music
+        <small>Music keeps me motivated every day.</small>
+      </div>
+      <div class="hobby-card">
+        <span>📸</span>
+        Photography
+        <small>I capture beautiful moments and scenery.</small>
+      </div>
+    </div>
+
+    <p>You can find more inspiration by visiting 
+      <a href="https://www.youtube.com" target="_blank">YouTube</a> — one of my favorite websites!
+    </p>
+  </div>
+</body>
+</html>
